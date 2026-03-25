@@ -2,6 +2,6 @@
 
 For grading this assignment, please refer to the following files:
 
-1. src/Project.java for the final code.
+1. src/main.java for the final code.
 
 2. src/pseudoCode.txt for the pseudo code.
