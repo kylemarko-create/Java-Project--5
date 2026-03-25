@@ -1,3 +1,47 @@
-Develop a Java program that will store data in the form of daily average temperatures for one week. Store the day and average temperature in two different arraylists. Your program should prompt the user for the day of the week (Monday through Sunday) and display both the day and temperature for each day. If "week" is entered, the output for your program should provide the temperature for each day and the weekly average. Use the looping and decision constructs in combination with the arrays to complete this assignment.
+// Develop a Java program that will store data in the form of daily average temperatures for one week. Store the day and average temperature in two different arraylists. Your program should prompt the user for the day of the week (Monday through Sunday) and display both the day and temperature for each day. If "week" is entered, the output for your program should provide the temperature for each day and the weekly average. Use the looping and decision constructs in combination with the arrays to complete this assignment.
 
-Compile and submit your pseudocode, source code, and screenshots of the application executing the application, the results and GIT repository in a single document.
+// Compile and submit your pseudocode, source code, and screenshots of the application executing the application, the results and GIT repository in a single document.
+
+Import statements
+
+Main class {
+    Main wrapper statement {
+        Create an Array List for days. Use strings.
+        Add each day of the week to the list.
+        // Commented out print statement for testing
+
+        Create a double based array list for tempature.
+        Add each tempature for each day.
+        // Commented out print statement for testing
+
+        Use the average function here (copied from your previous assignment) to get an average of the week for tempature.
+        //Testing statement that is commented out to display the average, but rounded.
+
+        initalize a scanner
+        Prompt the user: "Enter a day, or enter 'Week' if you would like to see a weekly average of the weather."
+
+        set user reply equal to a varible
+
+        Set varible week to be = "Week"
+
+        if the user types uppercase or lowercase week{
+            for loop to display every days tempature in the entire week
+            // Commented out console print test code from for loop
+            Display the rounded weekly average as well.
+        }
+        
+        else statement for if the user enters something besides "week" {
+            initalize a boolean trigger as false.
+            for loop for when a day is chosen {
+                if the user input is a day of the week on the list{
+                    Print the day of the week and the tempature
+                    set the boolean to true
+                    break the function.
+                }
+            }       
+            if the boolean is false {
+                print an error message
+            }  
+        }
+    }
+}

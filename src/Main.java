@@ -44,19 +44,25 @@ public class Main {
         String Week = "Week";
 
         if (userInput.equalsIgnoreCase(Week)){
-            for (int x = 0; x < days.size(); x++)
+            for (int x = 0; x < days.size(); x++) {
                 System.out.println(days.get(x) + ": " + tempature.get(x) + "°");
+            }
             //System.out.println();
             System.out.println("Weekly Average: " + (Math.round(average * 10.0) / 10.0 + "°"));
         }
+        
         else {
-            for (int i = 0; i < days.size(); i++)
+            boolean dayTrigger = false;
+            for (int i = 0; i < days.size(); i++) {
                 if (userInput.equalsIgnoreCase(days.get(i))){
                     System.out.println(days.get(i) + ": " + tempature.get(i) + "°");
-            }
+                    dayTrigger = true;
+                    break;
+                }
+            }       
+            if (!dayTrigger) {
+                System.out.println("Error, please enter a valid input");
+            }  
         }
-        // else {
-        //     System.out.println("Error: Please enter a day of the week or the phrase 'week'");
-        // }
     }
 }
