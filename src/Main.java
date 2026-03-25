@@ -16,11 +16,8 @@ public class Main {
         days.add("Friday");
         days.add("Saturday"); 
         days.add("Sunday");
-        System.out.println(days);
-        second(args);
-    }
+        // System.out.println(days);
 
-    public static void second(Double[] args) {
         ArrayList<Double> tempature = new ArrayList<Double>();
         tempature.add(73.0);
         tempature.add(70.0);
@@ -29,8 +26,7 @@ public class Main {
         tempature.add(47.0);
         tempature.add(50.0); 
         tempature.add(39.0);
-        System.out.println(tempature);
-
+        // System.out.println(tempature);
 
         double sum = 0;
         for (double t : tempature) {
@@ -38,7 +34,29 @@ public class Main {
         }
         double average = 0;
         average = sum / 7;
-        System.out.println("Average Tempature:" + average);
-    }
+        //System.out.println(Math.round(average * 10.0) / 10.0);
 
+        Scanner dayInput = new Scanner(System.in);
+        System.out.println("Enter a day, or enter 'Week' if you would like to see a weekly average of the weather.");
+
+        String userInput = dayInput.nextLine();
+
+        String Week = "Week";
+
+        if (userInput.equalsIgnoreCase(Week)){
+            for (int x = 0; x < days.size(); x++)
+                System.out.println(days.get(x) + ": " + tempature.get(x) + "°");
+            //System.out.println();
+            System.out.println("Weekly Average: " + (Math.round(average * 10.0) / 10.0 + "°"));
+        }
+        else {
+            for (int i = 0; i < days.size(); i++)
+                if (userInput.equalsIgnoreCase(days.get(i))){
+                    System.out.println(days.get(i) + ": " + tempature.get(i) + "°");
+            }
+        }
+        // else {
+        //     System.out.println("Error: Please enter a day of the week or the phrase 'week'");
+        // }
+    }
 }
